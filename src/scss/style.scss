@@ -311,3 +311,18 @@ $yellow5: #ccac29;
  	&:nth-child(4n+4)  	{ background-color: $yellow4; }
  }
 
+@media all and (max-width: 900px) and (min-width: 641px) {
+	.item {
+		width: 50%
+	}
+}
+
+@media all and (max-width: 640px) {
+	.item {
+		width: 100%
+	}
+}
+
+
+
+
