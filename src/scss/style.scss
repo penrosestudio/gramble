@@ -7,31 +7,209 @@
 $margin : 10px;
 $margintwo : $margin*2;
 
+@import "bootstrap";
+
+/*******************
+  Penrose site styles
+  *******************/
+
+// palette
+
+$mid-grey: 	#656565;
+$dark-grey: #222222;
+$yellow:	#f6cf32;
+$white: 	#ffffff;
+
+$transparent-black:	rgba(0,0,0,0.2);
+
+
+//typography
+
+$logo-font: 'Montserrat', sans-serif;
+$body-font: LatoLatinLight;
+$heavy-font: LatoLatin;
+
+$logo-font-size: 50px;
+$body-font-size: 14px;
+$small-font-size: 12px;
+$header-font-size: 18px;
+$standfirst-font-size: 35px;
+$stream-header-font-size: 18px;
+$stream-subheader-font-size: 16px;
+
+$line-height: 30px;
+$small-line-height: 20px;
+
+// margins & spacing
+
+$left-margin: 0px;
+
+// Fonts
+
+@font-face {
+    font-family: 'LatoLatin';
+    src: url('../fonts/lato/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/lato/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato/LatoLatin-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'LatoLatinLight';
+    src: url('../fonts/lato/LatoLatinLight-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/lato/LatoLatinLight-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato/LatoLatinLight-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato/LatoLatinLight-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+	margin: 0;
+}
+
+body {
+	font-family: $body-font;
+	font-weight: 200;
+	font-size: $body-font-size;
+	color: $white;
+	text-rendering: optimizeLegibility;
+	letter-spacing: 0.05em;
+	background-color: $mid-grey;
+}
+
+a {
+	-webkit-transition: all 100ms ease-out 0.1s;
+	-moz-transition: all 100ms ease-out 0.1s;
+	-o-transition: all 100ms ease-out 0.1s;
+	transition: all 100ms ease-out 0.1s;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.logo {
+	font-family: $logo-font;
+	text-transform: uppercase;
+	font-size: $logo-font-size;
+	margin: 100px 0px 60px;
+	letter-spacing: 0.2em;
+}
+
+.hero-img {
+	background: url(../images/bg-shot.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.hero {
+	padding-left: $left-margin;
+	overflow: hidden;
+	padding-bottom: 40px;
+	.standfirst {
+		font-size: $standfirst-font-size;
+		line-height: $standfirst-font-size;
+		letter-spacing: 0.07em;
+		font-weight: 200;
+		margin-bottom: 80px;
+		padding-right: 20px;
+		font-family: $body-font;
+	}
+	p {
+		margin: 40px 0px;
+		font-size: $header-font-size;
+		font-weight: 400;
+		font-family: $heavy-font;
+	}
+	a {
+		color: $yellow;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.stream {
+	position: relative;
+	padding-left: $left-margin;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: $yellow;
+	color: $dark-grey;
+	overflow: hidden;
+	h2 {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size: $stream-header-font-size;
+		font-weight: 200;
+		margin-bottom: 40px;
+	}
+	h3 {
+		font-size: $stream-subheader-font-size;
+		margin-bottom: 20px;
+		font-family: $heavy-font;
+		a {
+			color: $dark-grey;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $transparent-black;
+			&:hover {
+				border-bottom-color: $dark-grey;
+				color: $dark-grey;
+			}
+		}
+	}
+	a {
+		color: $mid-grey;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.footer p {
+	margin-top: 100px;
+	font-size: $small-font-size;
+}
+
+/*******************
+  Gramble styles
+  *******************/
+
 
 
 .grambleContainer {
 	width: 95%;
 	margin: auto;
 	position: relative;
+	color: $mid-grey;
+	white-space-collapse: discard;
 }
 
 .item {
-	width: calc(12.5% - 20px);
+	white-space-collapse: discard;
+	width: 12.5%;
 	padding: 10px;
 	min-height: 160px;
 	background-color: #fefefe;
-	border: 1px solid #ccc;
-	margin: 10px;
 	position: relative;
 	&.link {
 
 	}
 	&.article {
-		width: calc(25% - 20px);
+		width: 25%;
 	}
 	&.image {
 		padding: 0px;
-		width: calc(37.5% - 20px);
+		width: 37.5%;
 		min-height: 100px;
 		img {
 			width: 100%;
