@@ -10,7 +10,7 @@
         console.log('data!',data);
         $(document).ready(function() {
             // add the items to the container
-            var $container = $('.grambleContainer').eq(1);
+            var $container = $('.grambleContainer').last();
             $(data).each(function(i, item) {
                 var title = item.d,
                     url = item.u,
@@ -32,6 +32,10 @@
             var pckry = new Packery($container.get(0), {
                 itemSelector: '.item',
                 columnWidth: '.item'
+            });
+            // layout when images are done loading
+            $container.imagesLoaded( function() {
+                $container.packery();
             });
         });
     }
