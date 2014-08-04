@@ -20,6 +20,13 @@ $dark-grey: #222222;
 $yellow:	#f6cf32;
 $white: 	#ffffff;
 
+$blue: 		#43b2ff;
+$green: 	#15d246;
+$pink:	 	#f63293;
+$red:	 	#f64932;
+
+
+
 $transparent-black:	rgba(0,0,0,0.2);
 
 
@@ -79,7 +86,7 @@ body {
 	color: $white;
 	text-rendering: optimizeLegibility;
 	letter-spacing: 0.05em;
-	background-color: $mid-grey;
+	
 }
 
 a {
@@ -185,34 +192,67 @@ a {
   *******************/
 
 
+$columnwidth : 200px;
 
 .grambleContainer {
-	width: 95%;
+
+	width: 90%;
 	margin: auto;
 	position: relative;
 	color: $mid-grey;
 	white-space-collapse: discard;
+	a {
+		font-size: 22px;
+		color: white;
+		font-family: LatoLatin;
+		display: block;
+
+	}
+	p {
+		font-size: 16px;
+	}
 }
 
 .item {
 	white-space-collapse: discard;
-	width: 12.5%;
+	width: $columnwidth*2;
 	padding: 10px;
-	min-height: 160px;
+	min-height: 200px;
 	background-color: #fefefe;
 	position: relative;
 	&.link {
+		padding: 100px 20px;
 
 	}
 	&.article {
-		width: 25%;
+		width: $columnwidth*2;
 	}
 	&.image {
 		padding: 0px;
-		width: 37.5%;
-		min-height: 100px;
+		width: $columnwidth*3;
+		height: 400px;
+		overflow: hidden;
 		img {
 			width: 100%;
 		}
 	}
 }
+
+.grambleContainer .item {
+	&:first-child   { background-color: $yellow; }
+	&:nth-child(2)  { background-color: $blue; }
+	&:nth-child(3)  { background-color: $green; }
+	&:nth-child(4)  { background-color: $pink; }
+	&:nth-child(5)  { background-color: $yellow; }
+	&:nth-child(6)  { background-color: $blue; }
+	&:nth-child(7)  { background-color: $yellow; }
+	&:nth-child(8)  { background-color: $blue; }
+	&:nth-child(9)  { background-color: $green; }
+	&:nth-child(10) { background-color: $pink; }
+	&:nth-child(11)  { background-color: $yellow; }
+	&:nth-child(12)  { background-color: $blue; }
+	&:nth-child(13)  { background-color: $green; }
+	&:nth-child(14) { background-color: $pink; }
+}
+
+
