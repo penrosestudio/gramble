@@ -3,3 +3,33 @@
 /*******************
   Project styles
   *******************/
+
+$margin : 10px;
+$margintwo : $margin*2;
+
+
+
+.grambleContainer {
+	width: 95%;
+	margin: auto;
+	position: relative;
+}
+
+.item {
+	width: calc(12.5% - 20px);
+	height: 160px;
+	background-color: #fefefe;
+	border: 1px solid #ccc;
+	margin: 10px;
+	position: relative;
+	&.link {
+
+	}
+	&.article {
+		width: calc(25% - 20px);
+	}
+	&.image {
+		width: calc(37.5% - 20px);
+		height: 300px;
+	}
+}
