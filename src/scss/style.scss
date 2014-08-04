@@ -192,53 +192,114 @@ a {
   *******************/
 
 
-$columnwidth : 200px;
+// $columnwidth : 200px;
+
+.grambleContainer2 {
+	display: none;
+}
 
 .grambleContainer {
-
-	width: 90%;
+	min-height: 110%;
+	width: 100%;
 	margin: auto;
 	position: relative;
 	color: $mid-grey;
 	white-space-collapse: discard;
 	a {
 		font-size: 22px;
-		color: white;
+		color: #111;
 		font-family: LatoLatin;
-		display: block;
-
+		display: inline-block;
+		padding-bottom: 10px;
+		//border-bottom: 5px solid #111;
 	}
 	p {
 		font-size: 16px;
 	}
 }
 
+body {
+	background-color: $yellow;
+	width: 100%;
+}
+
 .item {
 	white-space-collapse: discard;
-	width: $columnwidth*2;
+	width: 33.333333333%;
 	padding: 10px;
 	min-height: 200px;
 	background-color: #fefefe;
 	position: relative;
+	p {
+		color: #111;
+		z-index: 1;
+		position: relative;
+		transition: color 600ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+	}
+	p.title {
+		font-size: 22px;
+	}
+	p.body {
+		font-family: LatoLatinLight;
+	}
 	&.link {
 		padding: 100px 20px;
 
 	}
 	&.article {
-		width: $columnwidth*2;
+		padding: 100px 20px;		
 	}
 	&.image {
 		padding: 0px;
-		width: $columnwidth*3;
-		height: 400px;
+		//width: 66.66666666%;
+		//width: $columnwidth*3;
 		overflow: hidden;
 		img {
 			width: 100%;
 		}
 	}
+	overflow: hidden;
+	.cover {
+		position: absolute;
+		display: block;
+		background-color: rgba(0,0,0,0.7);
+		font-size: 12px;
+		width: 100%;
+		height: 100%;
+		top: -100%;
+		left: 0%;
+		color: white;
+		text-align: right;
+		transition: top 200ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+		span {
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			width: 100%;
+			top: -100%;
+			display: block;
+			position: absolute;
+			padding: 50px 20px;
+			transition: top 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+		}
+	}
+	&:hover {
+		transform: scale(1.05);
+		z-index: 1;
+		p {
+			color: white;
+		}
+		.cover {
+			top: 0%;
+			span {
+				top: 0%;
+			}
+		}
+	}
 }
 
-.grambleContainer .item {
+
+
+/* .grambleContainer .item {
 	&:first-child   { background-color: $yellow; }
 	&:nth-child(2)  { background-color: $blue; }
 	&:nth-child(3)  { background-color: $green; }
@@ -254,5 +315,27 @@ $columnwidth : 200px;
 	&:nth-child(13)  { background-color: $green; }
 	&:nth-child(14) { background-color: $pink; }
 }
+ */
 
+$yellow2: #e8c32f;
+$yellow3: #ddba2d;
+$yellow4: #d3b22b;
+$yellow5: #ccac29;
+
+ .grambleContainer .item {
+ 	&:first-child   { background-color: $yellow; }
+ 	&:nth-child(2)  { background-color: $yellow2; }
+ 	&:nth-child(3)  { background-color: $yellow3; }
+ 	&:nth-child(4)  { background-color: $yellow4; }
+ 	&:nth-child(5)  { background-color: $yellow; }
+ 	&:nth-child(6)  { background-color: $yellow2; }
+ 	&:nth-child(7)  { background-color: $yellow3; }
+ 	&:nth-child(8)  { background-color: $yellow4; }
+ 	&:nth-child(9)  { background-color: $yellow; }
+ 	&:nth-child(10) { background-color: $yellow; }
+ 	&:nth-child(11)  { background-color: $yellow2; }
+ 	&:nth-child(12)  { background-color: $yellow3; }
+ 	&:nth-child(13)  { background-color: $yellow4; }
+ 	&:nth-child(14)  { background-color: $yellow; }
+ }
 

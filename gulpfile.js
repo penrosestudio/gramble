@@ -33,7 +33,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('javascripts', function() {
-  gulp.src(['./src/javascripts/jquery-1.11.0.min.js', './src/javascripts/bootstrap.min.js', './src/javascripts/app.js', './src/javascripts/masonry.pkgd.js'])
+  gulp.src(['./src/javascripts/jquery-1.11.0.min.js', './src/javascripts/bootstrap.min.js', './src/javascripts/app.js', './src/javascripts/packery.pkgd.js'])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./build/javascripts'));
 });
